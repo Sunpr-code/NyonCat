@@ -18,16 +18,40 @@
 - 用于记录对相关样本的静态分析、研究笔记、参考资料与复现日志（仅限安全隔离环境）。  
 - 不提供任何运行、传播或复现攻击的操作步骤或可执行代码。
 
-## 仓库结构（示例）
-- docs/ — 分析报告、笔记、截图（不包含可执行文件）  
-- hashes.txt — 样本哈希（仅用于参考）  
-- resources.md — 参考资料与分析链接  
-- README.md — 项目说明与合规声明
+## 当前仓库结构
+（下面列出的目录/文件为本仓库当前主要内容，供合作者快速定位）
 
-## 关于贡献
-- 接受以研究和防御为目的的合规贡献。  
-- 严禁提交任何可执行的恶意程序、可直接运行的 payload、或明确的利用步骤。  
-- 欢迎补充分析、引用公开研究或提交改进的安全性说明。
+- ghidra/ — Ghidra 项目模板与脚本
+  - ghidra/README.md — Ghidra 使用说明与安全声明
+  - ghidra/ANALYSIS_CHECKLIST.md — 分析检查清单
+  - ghidra/HEADLESS_ANALYSIS.md — headless 分析模板说明
+  - ghidra/REPORT_TEMPLATE.md — Ghidra 报告模板（示例）
+  - ghidra/ghidra_scripts/ — 示例 Jython 脚本（ExtractStrings.py、ExportFunctionList.py）
+- Report/ — 合作者提交分析报告的目录（合规、非敏感产物）
+  - Report/REPORT_TEMPLATE.md — 报告模板（请复制为自己的报告并提交 PR）
+- hashes.txt — 样本哈希（仅用于识别/验证）
+- README.md — 项目说明与合规声明（当前文件）
+
+> 注：如需查看或使用 Ghidra 脚本，请在隔离的本地环境中按 ghidra/README.md 的指引操作。
+
+## 如何贡献你的分析报告
+如果你希望将自己的研究报告或分析产物分享给合作者，请将非敏感内容放入仓库的 Report/ 目录下，并遵循下述要求：
+
+- 报告位置与命名��
+  - 将报告文件放在 Report/ 目录中，建议命名格式为 `ContributorName-YYYYMMDD-ShortTitle.md`，例如 `alice-20260825-memz-static-analysis.md`。
+- 禁止上传的内容：
+  - 严禁在报告中包含任何可执行二进制、payload、完整脚本、或能直接复现攻击的命令/数据。若需要展示样本相关信息，仅提供哈希、函数列表、截图、或文本化的静态分析输出。
+- 必填信息（请在报告中包含）：
+  - 样本标识：SHA256（必填），可选 SHA1 / MD5。  
+  - 分析环境：使用的 Ghidra 版本、操作系统、以及是否为隔离/离线环境（不要提供可访问的镜像或样本位置）。  
+  - 摘要：对样本功能的简要结论与风险评估（2–5 句）。  
+  - 静态分析发现：imports/exports（摘要）、关键字符串、关键函数与行为描述。  
+  - 附件：函数列表、导出字符串文件、截图（均为非敏感输出）。
+- 提交流程：
+  - 推荐方式：在本地新建分支，添加文件到 Report/ 后发起 Pull Request，由维护者审核后合并。  
+  - 若需受限访问或你不确定报告是否适合公开，请先通过 Issue 联系维护者说明目的与资质。
+
+请使用 Report/REPORT_TEMPLATE.md（仓库中模板）开始撰写你的报告；模板中包含了上述必填项的结构化字段。
 
 ## 报告问题 / 联系方式
 - 若发现敏感或危险内容被误提交，请通过 Issue 联系仓库维护者并注明“Security”或“Sensitive”以便尽快处理。  
