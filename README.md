@@ -25,7 +25,6 @@
   - ghidra/README.md — Ghidra 使用说明与安全声明
   - ghidra/ANALYSIS_CHECKLIST.md — 分析检查清单
   - ghidra/HEADLESS_ANALYSIS.md — headless 分析模板说明
-  - ghidra/REPORT_TEMPLATE.md — Ghidra 报告模板（示例）
   - ghidra/ghidra_scripts/ — 示例 Python 脚本（ExtractStrings.py、ExportFunctionList.py）
 - Report/ — 合作者提交分析报告的目录（合规、非敏感产物）
   - Report/REPORT_TEMPLATE.md — 报告模板（请复制为自己的报告并提交 PR）
