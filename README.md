@@ -26,7 +26,7 @@
   - ghidra/ANALYSIS_CHECKLIST.md — 分析检查清单
   - ghidra/HEADLESS_ANALYSIS.md — headless 分析模板说明
   - ghidra/REPORT_TEMPLATE.md — Ghidra 报告模板（示例）
-  - ghidra/ghidra_scripts/ — 示例 Jython 脚本（ExtractStrings.py、ExportFunctionList.py）
+  - ghidra/ghidra_scripts/ — 示例 Python 脚本（ExtractStrings.py、ExportFunctionList.py）
 - Report/ — 合作者提交分析报告的目录（合规、非敏感产物）
   - Report/REPORT_TEMPLATE.md — 报告模板（请复制为自己的报告并提交 PR）
 - hashes.txt — 样本哈希（仅用于识别/验证）
@@ -61,5 +61,3 @@
 - 本仓库的材料仅用于研究与教育目的。任何人使用本仓库内容必须遵守适用法律。  
 - 如需明确许可状态，请联系维护者；在不明确的情况下，默认不授权任何滥用或传播行为。
 
----
-本 README 为示例性文本，已以安全为首要考虑；请根据实际情况与合规要求调整仓库内容与访问权限。
